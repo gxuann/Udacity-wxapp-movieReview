@@ -3,7 +3,7 @@ const CONF = {
     rootPathname: '',
 
     // 微信小程序 App ID
-    appId: '',
+    appId: 'wxa108c9a7bd0eb47f',
 
     // 微信小程序 App Secret
     appSecret: '',
@@ -21,7 +21,7 @@ const CONF = {
         port: 3306,
         user: 'root',
         db: 'cAuth',
-        pass: '',
+        pass: 'wxa108c9a7bd0eb47f',
         char: 'utf8mb4'
     },
 
@@ -30,11 +30,12 @@ const CONF = {
          * 地区简称
          * @查看 https://cloud.tencent.com/document/product/436/6224
          */
-        region: 'ap-guangzhou',
+        region: 'ap-shanghai',
         // Bucket 名称
-        fileBucket: 'qcloudtest',
+        fileBucket: 'movies',
         // 文件夹
-        uploadFolder: ''
+        uploadFolder: '',
+        mimetypes: ['audio/x-aac', 'audio/mpeg', 'video/webm', 'audio/mpeg', 'audio/mp3', 'audio/m4a'],
     },
 
     // 微信登录态有效期
