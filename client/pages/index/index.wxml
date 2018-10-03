@@ -1,0 +1,41 @@
+<!--pages/index/index.wxml-->
+<view wx:if="{{!userInfo}}">
+  <view class="unlogin-card">
+    <image class="unlogin-head" src='/images/unlogin.png'></image>
+    <view class="unlogin-info">
+      <view class="unlogin-text">未登录</view>
+      <view class="unlogin-tips">请登录之后再来体验更多功能~</view>
+    </view>
+  </view>
+  <button wx:if="{{locationAuthType==0}}" class="unlogin-btn" open-type='getUserInfo' bindgetuserinfo='onTapLogin'>微信登录</button>
+  <button wx:if="{{locationAuthType==1}}" class="unlogin-btn" open-type='openSetting' bindopensetting="onTapLogin">授权登录</button>
+</view>
+<view class='box' wx:else>
+  <view wx:if="{{gethotmovie}}">
+    <view class="home-page">
+      <view class='home-top'>
+        <view class='home-movie-detail' bindtap='hometap'>
+          <image class='home-movie-detail image' mode='aspectFill' src="{{gethotmovie.image}}"></image>
+        </view>
+        <view class='home-movie-title'>{{gethotmovie.title}}</view>
+        <view class='home-top-detail'>
+          <view class='home-top-detail-user-hn' wx:if='{{getComment.avatar}}' bindtap='topDetail'> 
+            <image class='user-head' src="{{getComment.avatar?getComment.avatar: '/Avatar/user-unlogin.png'}}"></image>
+            <view class="user-name">{{getComment.username}}  给你推荐了一部电影</view>
+          </view>
+          <view class='home-top-detail notc' wx:else> 抱歉哦，还没有其TA影迷推荐呐 ！</view>
+        </view>
+      </view>
+    </view>
+    <view class='home-tabbar'>
+      <view class='home-hot' bindtap='homeHot'>
+        <image class='home-img' mode='aspectFill' src="/images/hot.png"></image>
+        <view class='home-text'>热门</view>
+      </view>
+      <view class='home-user' bindtap='homeUser'>
+        <image class='home-img' mode='aspectFill' src="/images/user.png"></image>
+        <view class='home-text'>我</view>
+      </view>
+    </view>
+  </view>
+</view>
