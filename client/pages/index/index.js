@@ -19,15 +19,13 @@ Page({
     })
   },
   homeHot() {
-    // url = "/pages/hot/hot" 
     wx.navigateTo({
-      url: '/pages/hot/hot',
+      url: '/pages/hot/index',
     })
   },
   homeUser() {
-    // url = "/pages/user/user" 
     wx.navigateTo({
-      url: '/pages/user/user',
+      url: '/pages/user/index',
     })
   },
   /**
