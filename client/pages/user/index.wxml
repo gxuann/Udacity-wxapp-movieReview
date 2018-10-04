@@ -1,1 +1,36 @@
 <!--pages/user/index.wxml-->
+<view class='user-card'>
+  <view class="{{curNav === 0? 'user-store':'hide'}}">
+    <view class='user-top-text' bindtap='clickShowT'>收藏的影评</view>
+    <image class='user-top-arrow' mode='aspectFit' src='/images/arrow.png'></image>
+    <view class='user-top-text' bindtap='clickShowG'>发布的影评</view>
+    <image class='user-top-arrow' mode='aspectFit' src='/images/arrow.png'></image>
+  </view>
+  <view class="{{curNav === 1? 'user-store':'hide'}}">
+    <view class='user-top-text' bindtap='clickShowF'>收藏的影评</view>
+    <image class='user-top-arrow' mode='aspectFit' src='/images/arrow2.png' wx:if="{{curNav === 1 && curNav2 === 0}}"></image>
+    <image class='user-top-arrow' mode='aspectFit' src='/images/arrow.png' wx:else></image>
+    <view class='user-top-text' bindtap='clickShowH'>发布的影评</view>
+    <image class='user-top-arrow' mode='aspectFit' src='/images/arrow2.png' wx:if="{{curNav2 === 1}}"></image>
+    <image class='user-top-arrow' mode='aspectFit' src='/images/arrow.png' wx:else></image>
+  </view>
+  <view wx:if='{{curNav===1||curNav2===1}}' bindtap='topDetail' class='user-store-items' wx:for='{{liststoremv}}' wx:for-item='items' wx:key='id' >
+      <image class='item-image' src='{{items.image}}' mode='aspectFit' data-id="{{items.movie_id}}" data-index="{{index}}" data-image="{{items.image}}" data-title="{{items.title}}"></image>
+      <view class='item-list' data-id="{{items.movie_id}}" data-index="{{index}}" data-image="{{items.image}}" data-title="{{items.title}}">
+        <view class='store-title'>{{items.title}}</view>
+        <view class='store-context' wx:if="{{items.cmt === 'wz'}}">{{items.content}}</view>
+        <view class='reEditComBox' wx:else>
+          <view class='reEditComButton'>
+            <view class='video-box'>
+              <image class='video-button' mode='aspectFill' src='/images/play.png'></image>
+            </view>
+          </view>
+        </view>
+        <view class='user-info'>
+          <image class='user-head' mode='aspectFit' src="{{!!userInfo?userInfo.avatarUrl: '/images/unlogin.png'}}"></image>
+          <view class='user-name' >{{!!userInfo?userInfo.nickName:""}}</view>
+        </view>
+      </view>
+  </view>
+</view>
+  <navigator class='back-index' url='/pages/index/index'>回到首页</navigator>

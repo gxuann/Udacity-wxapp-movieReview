@@ -8,5 +8,31 @@
 	},
 	"appid": "wxa108c9a7bd0eb47f",
 	"projectname": "UdaMovies",
-	"condition": {}
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 0,
+			"list": [
+				{
+					"id": -1,
+					"name": "用户页",
+					"pathName": "pages/user/index"
+				}
+			]
+		}
+	}
 }

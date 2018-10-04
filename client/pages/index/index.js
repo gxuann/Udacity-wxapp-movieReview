@@ -18,12 +18,12 @@ Page({
       wx.stopPullDownRefresh()
     })
   },
-  homeHot() {
+  tabbarHot() {
     wx.navigateTo({
       url: '/pages/hot/index',
     })
   },
-  homeUser() {
+  tabbarUser() {
     wx.navigateTo({
       url: '/pages/user/index',
     })
@@ -32,15 +32,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // console.log(!this.data.userInfo)
-    // if (!this.data.userInfo) return;
     this.getMovieLists()
-    // console.log(this.data.getComment)
-    // console.log(!this.data.getComment)
-    // console.log(!!this.data.getComment)
   },
   topDetail() {
-    // url = "/pages/top-detail/top-detail"
     let getMovieId = this.data.gethotmovie.id
     let getMovieTitle = this.data.gethotmovie.title
     let getMovieImage = this.data.gethotmovie.image
@@ -116,8 +110,6 @@ Page({
             title: '热门电影加载失败',
           })
         }
-        // console.log("首页数据：")
-        // console.log(result.data.data[0].id)
       },
       fail: result => {
         wx.hideLoading()
@@ -128,7 +120,6 @@ Page({
       },
       complete: () => {
         typeof callback === 'function' && callback()
-        // callback && callback()
       }
     })
   },
@@ -139,9 +130,7 @@ Page({
           userInfo,
           locationAuthType: app.data.locationAuthType
         })
-        // 登录成功进入主页
         this.getMovieLists()
-
       },
       error: () => {
         this.setData({

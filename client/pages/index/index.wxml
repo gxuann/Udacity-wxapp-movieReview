@@ -27,14 +27,14 @@
         </view>
       </view>
     </view>
-    <view class='home-tabbar'>
-      <view class='home-hot' bindtap='homeHot'>
-        <image class='home-img' mode='aspectFill' src="/images/hot.png"></image>
-        <view class='home-text'>热门</view>
+    <view class='tabbar'>
+      <view class='tabbar-hot' bindtap='tabbarHot'>
+        <image class='tabbar-img' mode='aspectFill' src="/images/hot.png"></image>
+        <view class='tabbar-text'>热门</view>
       </view>
-      <view class='home-user' bindtap='homeUser'>
-        <image class='home-img' mode='aspectFill' src="/images/user.png"></image>
-        <view class='home-text'>我</view>
+      <view class='tabbar-user' bindtap='tabbarUser'>
+        <image class='tabbar-img' mode='aspectFill' src="/images/user.png"></image>
+        <view class='tabbar-text'>我</view>
       </view>
     </view>
   </view>

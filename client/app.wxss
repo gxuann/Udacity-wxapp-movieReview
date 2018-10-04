@@ -1,6 +1,6 @@
 /**app.wxss**/
 page {
-  background-color: hsla(189, 19%, 93%, 0.582);
+  background-color: #f7f9fb;
 }
 
 .bg {
@@ -53,10 +53,10 @@ page {
   width: 250rpx;
   height: 80rpx;
   line-height: 80rpx;
-  background: rgb(152, 217, 247);
+  background: #7bc8a4;
   border-radius: 10rpx;
   font-size: 30rpx;
   text-align: center;
-  color: #34373D;
+  color: white;
   font-weight: bold;
 }
