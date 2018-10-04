@@ -12,8 +12,6 @@
   margin: 80rpx 28rpx auto 28rpx;
   background-color: white;
   height: 80%;
-  /* 白色周围一圈透明黑 */
-  box-shadow: 0 2rpx 13rpx 5rpx rgba(0, 0, 0, 0.02);
 }
 .add-comment-image{
   width: 240rpx;
@@ -56,17 +54,10 @@
   height: 70rpx;
   width: 70rpx;
   border-radius: 50%;
-  /* 垂直居中下 */
   justify-content: space-around;
   margin: 0 auto;
   flex-shrink: 0;
   align-items: center;
-}
-.recordStop-image{
-  height: 30rpx;
-  width: 30rpx;
-  background-color: hsla(352, 84%, 51%, 0.582);
-  opacity: 1;
 }
 .add-comment-record{
   display: flex;
@@ -96,10 +87,10 @@
 .workdown{
   flex-shrink: 0;
   position: fixed;
-  bottom: 10rpx;
+  bottom: 0rpx;
   height: 7%;
   width: 100%;
-  border:2px solid hsla(189, 19%, 93%, 0.582);
+  border:2px solid rgba(151, 151, 151, 0.2);
   background-color: rgba(0, 182, 18, 0.589);
 }
 .workdown-bt{

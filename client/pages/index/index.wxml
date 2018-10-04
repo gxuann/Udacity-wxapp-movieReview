@@ -23,7 +23,7 @@
             <image class='user-head' src="{{getComment.avatar?getComment.avatar: '/images/unlogin.png'}}"></image>
             <view class="user-name">{{getComment.username}}  给你推荐了一部电影</view>
           </view>
-          <view class='home-top-detail notc' wx:else> 抱歉哦，还没有其TA影迷推荐呐 ！</view>
+          <view class='home-top-detail notc' wx:else> emmm，这部电影还没有人推荐呀</view>
         </view>
       </view>
     </view>
