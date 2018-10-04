@@ -77,7 +77,7 @@ Page({
             title: '发表评论成功'
           })
           wx.navigateTo({
-            url: `/pages/comment/comment?id=${this.data.comment.id}&view=${1}`,
+            url: `/pages/comment-list/index?id=${this.data.comment.id}&view=${1}`,
           })
         } else {
           wx.showToast({
@@ -107,9 +107,11 @@ Page({
       url: config.service.uploadUrl,
       filePath: comment.video,
       name: 'file',
+      header: {
+        'content-type': 'multipart/form-data'
+      },
       success: (res) => {
         let response = JSON.parse(res.data);
-
         if (response.code === 0) {
           wx.showToast({
             icon: 'none',
@@ -124,14 +126,11 @@ Page({
           })
         }
         wx.hideLoading()
-
       },
-
       fail: (res) => {
         console.log('fail', res);
         wx.hideLoading()
       },
-
       complete: () => {
         wx.hideLoading();
       },

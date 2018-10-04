@@ -3,8 +3,9 @@
   position: fixed;
   height: 100%;
   width: 100%;
-  background-color: hsla(189, 19%, 93%, 0.582);
+  
   flex-shrink: 0;
+  box-shadow: 1rpx 2rpx 50rpx 5rpx #eaeaea;
 }
 .add-comment-items{
   justify-content: space-around;

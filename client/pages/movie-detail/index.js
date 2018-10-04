@@ -83,9 +83,6 @@ Page({
     })
   },
 
-  // 添加影评
-  // cmt:影评类型
-  // isSucess:调用成功
   addComment() {
     let mvdetail = this.data.mvdetail
     let mvdeailId = mvdetail.id
@@ -99,10 +96,16 @@ Page({
         let data = result.data
         if (!data.code) {
           if (!data.data) {
-            console.log("没有评价过，请继续！")
+            console.log("没有评价过")
             this.toAddComment()
           } else {
-            console.log("已经评论过了，跳转到评论列表中！")
+            console.log("已经评论过了！")
+            setTimeout(() => {
+              wx.showToast({
+                icon: 'none',
+                title: '你已经评论过这个影片了，跳转到评论列表中…',
+              })
+            }, 2000)
             this.toCommentList()
           }
         } else {

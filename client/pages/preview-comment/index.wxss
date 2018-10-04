@@ -1,17 +1,10 @@
 /* pages/preview-comment/index.wxss */
-.show-bg{
-  height: 100%;
-  width: 100%;
-  background-color: hsla(189, 19%, 93%, 0.582);
-  flex-shrink: 0;
-}
 .show-comment-items{
   justify-content: space-around;
   margin: 80rpx 28rpx 0 28rpx;
   background-color: white;
   height: 80%;
-  /* 白色周围一圈透明黑 */
-  box-shadow: 0 2rpx 13rpx 5rpx rgba(0, 0, 0, 0.02);
+  box-shadow: 1rpx 2rpx 50rpx 5rpx #eaeaea;
 }
 .show-comment-image{
   width: 240rpx;
@@ -51,7 +44,7 @@
 .user-name{
   flex-shrink: 0;
   height: 70rpx;
-  width: 200rpx;
+  width: 300rpx;
   opacity: 0.9;
   font-size: 30rpx;
   padding-top: 20rpx;
@@ -60,12 +53,16 @@
   margin-top: 30rpx;
   width: 400rpx;
   height: 200rpx;
-  /* border:2px solid hsla(189, 19%, 93%, 0.582); */
   margin-left: 50%;
-  transform: translateX(-50%)
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: row;
+}
+.reEditComText1{
+  font-size: 100rpx;
+  margin-right: 30rpx;
 }
 .reEditComText{
-  /* text 内容自动换行 */
   display: -webkit-box;
   font-size:28rpx;
   color:#000000;
@@ -75,8 +72,6 @@
   -webkit-line-clamp:3;
   overflow: hidden;
   text-overflow:ellipsis;
-}
-.reEditComButton{
 }
 .video-box{
   background-color: rgba(159, 175, 175, 0.459);
@@ -100,41 +95,28 @@
   transform: translateX(-50%);
   margin-bottom: 50rpx;  
 }
-.show-comment-left-bottom{
+.show-comment-bottom{
   position: relative;
-  /* 白色周围一圈透明黑 */
-  box-shadow: 0 2rpx 13rpx 5rpx hsla(189, 19%, 93%, 0.582);
-  border:2px solid hsla(189, 19%, 93%, 0.582);
+  border:2px solid rgba(151, 151, 151, 0.2);
   border-radius: 10rpx;
   width: 240rpx;
   margin-right: 50rpx;
   display: flex;
   align-items: center;
 }
-.show-comment-right-bottom{
-  /* 白色周围一圈透明黑 */
-  box-shadow: 0 2rpx 13rpx 5rpx hsla(189, 19%, 93%, 0.582);
-  border:2px solid hsla(189, 19%, 93%, 0.582);
+.show-comment-bottom{
+  border:2px solid rgba(151, 151, 151, 0.2);
   border-radius: 10rpx;
   width: 240rpx;
   display: flex;
   align-items: center;
 }
-.left-footer-img{
+.footer-img{
   height: 50rpx;
   width: 20%;
   margin-left: 10%;
 }
-.left-footer-txt{
-  font-size: 30rpx;
-  margin-left: 5%;
-}
-.right-footer-img{
-  height: 50rpx;
-  width: 20%;
-  margin-left: 10%;
-}
-.right-footer-txt{
+.footer-txt{
   font-size: 30rpx;
   margin-left: 5%;
 }

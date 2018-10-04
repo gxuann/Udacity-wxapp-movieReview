@@ -72,15 +72,9 @@
   margin-right: 30rpx;
 }
 .reEditComText{
-  display: -webkit-box;
   font-size:28rpx;
   color:#000000;
   line-height: 40rpx;
-  word-break: break-all;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp:3;
-  overflow: hidden;
-  text-overflow:ellipsis;
 }
 .video-box{
   background-color: rgba(159, 175, 175, 0.459);

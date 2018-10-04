@@ -1,10 +1,9 @@
 /* pages/movie-detail/index.wxss */
 .detail-box{
-  position: fixed;
-  justify-content: space-around;
+  position: absolute;
   margin: 80rpx 5% 28rpx ;
   background-color: white;
-  height: 90%;
+  height: 100%;
   width: 90%;
   box-shadow: 1rpx 2rpx 50rpx 5rpx #eaeaea;
 }
@@ -31,16 +30,9 @@
   margin-top: 20rpx;
 }
 .detail-desc{
-  justify-content: space-around;
   margin: 40rpx 56rpx auto;
   font-size: 28rpx;
-  /* 超过13行 自动点点点隐藏后文 */
-  text-overflow: -o-ellipsis-lastline;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 13;
-  -webkit-box-orient: vertical;
+  height: 70%
 }
 .detail-footer{
   display: flex;
