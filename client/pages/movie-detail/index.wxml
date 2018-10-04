@@ -1,2 +1,17 @@
 <!--pages/movie-detail/index.wxml-->
-<text>pages/movie-detail/index.wxml</text>
+<view class='detail-box' wx:if='{{mvdetail}}'>
+  <image class='detail-image' mode='aspectFill' src='{{mvdetail.image}}'></image>
+  <view class='detail-title'>{{mvdetail.title}}</view>
+  <view class='detail-desc'>{{mvdetail.description}}</view>
+  <view class='detail-footer'>
+    <view class='detail-bottom' bindtap='toCommentList'>
+      <image class='footer-img' mode='aspectFill' src='/images/look.png'></image>
+      <text class='footer-txt'>查看影评</text>
+    </view>
+    <view class='detail-bottom' bindtap='addComment'>
+      <image class='footer-img' mode='aspectFill' src='/images/comment.png'></image>
+      <text class='footer-txt'>添加影评</text>
+    </view>
+  </view>
+</view>
+<view class='err' wx:else>emmmmm 暂时还没找到电影详情数据，稍后再试~</view>

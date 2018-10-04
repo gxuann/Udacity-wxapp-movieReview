@@ -1,2 +1,33 @@
 <!--pages/preview-comment/index.wxml-->
-<text>pages/preview-comment/index.wxml</text>
+<view class='show-bg'>
+  <view class='show-comment-items' wx:if='{{comment}}'>
+    <image class='show-comment-image' mode='aspectFill' src='{{comment.image}}'></image>
+    <view class='show-comment-title'>{{comment.title}}</view>
+    <view class="show-comment-bottem">
+      <view class='user-info'>
+        <image class='user-head' mode='aspectFit' src="{{!!userInfo?userInfo.avatarUrl: '/images/unlogin.png'}}"></image>
+        <view class='user-name' >{{!!userInfo?userInfo.nickName:""}}的影评</view>
+      </view>    
+    </view>
+    <view class='reEditComBox' wx:if="{{comment.cmt == 'wz'}}">
+      <text class='reEditComText'>{{comment.recomments}}</text>
+    </view>
+    <view class='reEditComBox' wx:else bindtap='replay' data-name="play">
+      <view class='reEditComButton' bindtap='replay' data-name="play">
+        <view class='video-box' bindtap='replay' data-name="play">
+          <image class='video-button' mode='aspectFill' src='/images/play.png' bindtap='replay' data-name="play"></image>
+        </view>
+      </view>
+    </view>
+    <view class='show-comment-footer'>
+      <view class='show-comment-left-bottom' bindtap='reEditCom'>
+        <image class='left-footer-img' mode='aspectFill' src='/images/return.png'></image>
+        <text class='left-footer-txt'>重新编辑</text>
+      </view>
+      <view class='show-comment-right-bottom' bindtap='addComment'>
+        <image class='right-footer-img' mode='aspectFill' src='/images/send.png'></image>
+        <text class='right-footer-txt'>发布影评</text>
+      </view>
+    </view>
+  </view>
+</view>

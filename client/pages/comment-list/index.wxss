@@ -1,1 +1,96 @@
 /* pages/comment-list/index.wxss */
+.comment-items{
+  border:1px solid hsla(189, 19%, 93%, 0.582);
+}
+.comment-items:first-child{
+  margin-top: 50rpx;
+}
+.comment-item{
+  padding-top: 5%;
+  padding-bottom: 5%;
+  height: 50%;
+  width: 100%;
+  background-color: white;
+}
+.userinfo{
+  display: flex;
+  margin-left: 5%;
+}
+.userhead{
+  height: 60rpx;
+  width: 60rpx;
+  border-radius: 50%;
+}
+.username{
+  margin-top: 10rpx;
+  margin-left: 20rpx;
+  height: 60rpx;
+  text-align: center;
+  font-size: 30rpx;
+}
+.usertext{
+  padding-top: 5%;
+  font-size: 30rpx;
+  margin-left: 7%;
+  margin-right: 10%;
+
+  /* css 控制多余文字点点点显示 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.reEditComBox{
+  padding-top: 5%;
+  margin-left: 7%;
+  margin-right: 10%;
+  width: 250rpx;
+  flex-shrink: 0;
+  height: 70rpx;
+}
+.reEditComText{
+  /* text 内容自动换行 */
+  display: -webkit-box;
+  font-size:28rpx;
+  color:#000000;
+  line-height: 40rpx;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:3;
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
+.video-box{
+  background-color: rgba(159, 175, 175, 0.459);
+  width: 300rpx;
+  height: 65rpx;
+  border-radius: 5%;
+  flex-shrink: 0;
+
+}
+.video-button{
+  width: 65rpx;
+  height: 65rpx;
+  margin-left: 32rpx;
+  flex-shrink: 0;
+}
+.index-result{
+  position: fixed;
+  border-top:1px solid hsla(189, 19%, 93%, 0.582);
+  bottom: 0;
+  height: 110rpx;
+  width: 100%;
+  background-color: white;
+}
+.back-index{
+  position: fixed;
+  border-top: 2px solid rgba(151, 151, 151, 0.2);
+  bottom: 0;
+  height: 90rpx;
+  width: 100%;
+  background-color: white;
+  text-align: center;
+  font-size: 30rpx;
+  line-height: 90rpx;
+  color: #999999;
+  font-weight: bold
+}

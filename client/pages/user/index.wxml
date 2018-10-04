@@ -33,4 +33,4 @@
       </view>
   </view>
 </view>
-  <navigator class='back-index' url='/pages/index/index'>回到首页</navigator>
+<navigator class='back-index' url='/pages/index/index'>回到首页</navigator>

@@ -68,7 +68,7 @@ Page({
     let getMovieImage = this.data.gethotmovie.image
     let getMovieDescription = this.data.gethotmovie.description
     wx.navigateTo({
-      url: `/pages/mv-detail/mv-detail?id=${getMovieId}&title=${getMovieTitle}&category=${getMovieCategory}&image=${getMovieImage}&description=${getMovieDescription}`,
+      url: `/pages/movie-detail/index?id=${getMovieId}&title=${getMovieTitle}&category=${getMovieCategory}&image=${getMovieImage}&description=${getMovieDescription}`,
     })
   },
   getComment(id) {

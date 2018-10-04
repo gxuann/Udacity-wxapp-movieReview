@@ -1,2 +1,24 @@
 <!--pages/add-comment/index.wxml-->
-<text>pages/add-comment/index.wxml</text>
+<view class='add-bg'>
+  <view class='add-comment-items' wx:if='{{addcomments}}'>
+    <image class='add-comment-image' mode='aspectFill' src='{{addcomments.image}}'></image>
+    <view class='add-comment-title'>{{addcomments.title}}</view>
+    <textarea class='add-comment-input' bindinput='onInput' type='text' placeholder="输入你的影评内容..." wx:if="{{userType === 'wz'}}"></textarea>
+    <textarea class='add-comment-input' disabled="{{ true }}" wx:else></textarea>
+    <view class='add-comment-box' bind:touchstart='start' bind:touchend='stop'  wx:if="{{userType === 'yp'}}">
+      <view class='add-comment-record active'>
+        <image class='record-image' mode='aspectFill' src='/images/record.png'></image>
+        <view class='record-text'>录音</view>
+      </view>
+    </view>
+    <view class='add-comment-box' wx:else>
+      <view class='add-comment-record'>
+        <image class='record-image' mode='aspectFill' src='/images/sound_mute.png'></image>
+        <view class='record-text'>录音</view>
+      </view>
+    </view>
+  </view>
+  <view class="workdown  {{!setRecordOrAudio ? 'dis' : ''}}" bindtap='finishedHideShow'>
+    <view class='workdown-bt'>完成</view>
+  </view>
+</view>

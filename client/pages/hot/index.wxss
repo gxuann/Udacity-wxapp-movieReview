@@ -1,1 +1,28 @@
 /* pages/hot/index.wxss */
+.hot-list{
+  justify-content: space-around; 
+  margin: 52rpx 52rpx 28rpx;
+}
+.hot-list-items{
+  display: flex;
+  position: relative;
+  flex-shrink: 0;
+  align-items: center;
+  background-color: white;
+}
+.item-image{
+  width: 240rpx;
+  height: 320rpx;
+}
+.item-info{
+  margin: 0 20rpx;
+}
+.info-title:first-child{
+  font-size: 36rpx;
+  color: #34373D;
+  font-weight: bold;
+  margin-bottom: 40rpx;
+}
+.info-category{
+  font-size: 30rpx;
+}

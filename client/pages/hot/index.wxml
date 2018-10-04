@@ -1,2 +1,10 @@
 <!--pages/hot/index.wxml-->
-<text>pages/hot/index.wxml</text>
+<view class='hot-list' wx:for='{{listhotmovie}}' wx:for-item='item' wx:key='id'>
+  <navigator class='hot-list-items' url="/pages/movie-detail/index?id={{item.id}}">
+    <image class='item-image' mode='aspectFit' src='{{item.image}}'></image>
+    <view class='item-info'>
+      <view class='info-title'>{{item.title}}</view>
+      <view class='info-category'>{{item.category}}</view>
+    </view>
+  </navigator>
+</view>

@@ -25,12 +25,24 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 2,
 			"list": [
 				{
 					"id": -1,
 					"name": "用户页",
-					"pathName": "pages/user/index"
+					"pathName": "pages/user/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "电影详情页",
+					"pathName": "pages/movie-detail/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "HOT",
+					"pathName": "pages/hot/index"
 				}
 			]
 		}

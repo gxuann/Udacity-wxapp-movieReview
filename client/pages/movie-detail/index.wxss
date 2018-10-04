@@ -1,1 +1,71 @@
 /* pages/movie-detail/index.wxss */
+.detail-box{
+  position: fixed;
+  justify-content: space-around;
+  margin: 80rpx 5% 28rpx ;
+  background-color: white;
+  height: 90%;
+  width: 90%;
+  box-shadow: 1rpx 2rpx 50rpx 5rpx #eaeaea;
+}
+.err{
+  width: 90%;
+  margin: 50% 5%;
+  align-content: center;
+  text-align: center;
+  font-size: 50rpx;
+  font-weight: bold;
+}
+.detail-image{
+  width: 240rpx;
+  height: 320rpx;
+  margin-top: -50rpx;
+  margin-left: 50%;
+  transform: translateX(-50%)
+}
+.detail-title{
+  font-size: 36rpx;
+  color: #34373D;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20rpx;
+}
+.detail-desc{
+  justify-content: space-around;
+  margin: 40rpx 56rpx auto;
+  font-size: 28rpx;
+  /* 超过13行 自动点点点隐藏后文 */
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 13;
+  -webkit-box-orient: vertical;
+}
+.detail-footer{
+  display: flex;
+  position: absolute;
+  bottom: 50rpx;
+  margin-top: auto;
+  height: 80rpx;
+  margin-left: 50%;
+  transform: translateX(-50%)
+}
+.detail-bottom{
+  border:2px solid rgba(151, 151, 151, 0.2);
+  border-radius: 10rpx;
+  width: 240rpx;
+  margin-right: 50rpx;
+  margin-left: 50rpx;
+  display: flex;
+  align-items: center;
+}
+.footer-img{
+  height: 50rpx;
+  width: 20%;
+  margin-left: 10%;
+}
+.footer-txt{
+  font-size: 30rpx;
+  margin-left: 5%;
+}

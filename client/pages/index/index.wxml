@@ -20,7 +20,7 @@
         <view class='home-movie-title'>{{gethotmovie.title}}</view>
         <view class='home-top-detail'>
           <view class='home-top-detail-user-hn' wx:if='{{getComment.avatar}}' bindtap='topDetail'> 
-            <image class='user-head' src="{{getComment.avatar?getComment.avatar: '/Avatar/user-unlogin.png'}}"></image>
+            <image class='user-head' src="{{getComment.avatar?getComment.avatar: '/images/unlogin.png'}}"></image>
             <view class="user-name">{{getComment.username}}  给你推荐了一部电影</view>
           </view>
           <view class='home-top-detail notc' wx:else> 抱歉哦，还没有其TA影迷推荐呐 ！</view>

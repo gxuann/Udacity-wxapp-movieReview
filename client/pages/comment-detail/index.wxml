@@ -1,2 +1,50 @@
 <!--pages/comment-detail/index.wxml-->
-<text>pages/comment-detail/index.wxml</text>
+<view class='box'>
+  <view class='show-comment-items' wx:if='{{comment}}'>
+    <image class='show-comment-image' mode='aspectFill' src='{{comment.image}}'></image>
+    <view class='show-comment-title'>{{comment.title}}</view>
+    <view class="show-comment-bottem">
+      <view class='user-info'>
+        <image class='user-head' mode='aspectFit' src="{{!!comment?comment.avatar: '/images/unlogin.png'}}"></image>
+        <view class='user-name' >{{!!comment?comment.username:""}}的影评</view>
+      </view>    
+    </view>
+    <view class='reEditComBox' wx:if="{{comment.cmt==='wz'}}">
+      <text class='reEditComText1'>"</text>
+      <text class='reEditComText'>{{comment.content}}</text>
+    </view>
+    <view class='reEditComBox' wx:else bindtap='replay'>
+      <text class='reEditComText1'>"</text>
+      <view class='reEditComButton'>
+        <view class='video-box'>
+          <image class='video-button' mode='aspectFill' src='/images/play.png'></image>
+        </view>
+      </view>
+    </view>
+    
+    <view class='show-comment-footer' wx:if="{{userInfo.openId !== comment.openId}}">
+      <view class='show-comment-left-bottom' bindtap='cancCollect' wx:if="{{checkOk}}">
+        <image class='footer-img' mode='aspectFill' src='/images/collection_nor.png'></image>
+        <text class='footer-txt'>取消收藏</text>
+      </view>
+      <view class='show-comment-left-bottom dis' bindtap='setCollect' wx:else>
+        <image class='footer-img' mode='aspectFill' src='/images/collection.png'></image>
+        <text class='footer-txt'>收藏影评</text>
+      </view>
+      <view class='show-comment-right-bottom' bindtap='writeComment'>
+        <image class='footer-img' mode='aspectFill' src='/images/send.png'></image>
+        <text class='footer-txt'>写影评</text>
+      </view>
+    </view>
+    <view class='show-comment-footer' wx:else>
+      <view class='show-comment-left-bottom-dis' bindtap='cancCollect' wx:if="{{checkOk}}">
+        <image class='footer-img' mode='aspectFill' src='/images/collection_nor.png'></image>
+        <text class='footer-txt'>取消收藏</text>
+      </view>
+      <view class='show-comment-left-bottom-dis' bindtap='setCollect' wx:else>
+        <image class='footer-img' mode='aspectFill' src='/images/collection.png'></image>
+        <text class='footer-txt'>收藏影评</text>
+      </view>
+    </view>
+  </view>
+</view>
