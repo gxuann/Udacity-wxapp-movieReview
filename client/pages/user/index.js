@@ -85,7 +85,7 @@ Page({
     let getVideo = encodeURIComponent(comment.video)
 
     wx.navigateTo({
-      url: `/pages/top-detail/top-detail?id=${getMovieID}&title=${getTitle}&image=${getImage}&avatar=${getCommentHead}&username=${getCommentName}&content=${getCommentContent}&openId=${getCommentOpenId}&cmt=${getCmt}&video=${getVideo}`,
+      url: `/pages/comment-detail/index?id=${getMovieID}&title=${getTitle}&image=${getImage}&avatar=${getCommentHead}&username=${getCommentName}&content=${getCommentContent}&openId=${getCommentOpenId}&cmt=${getCmt}&video=${getVideo}`,
     })
   },
 
