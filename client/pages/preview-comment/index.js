@@ -32,18 +32,10 @@ Page({
   // 播放声音
   replay: function (e) {
     let comment = this.data.comment
-    innerAudioContext.autoplay = true
     let getName = e.target.dataset.name
     if (getName === "play") {
-      innerAudioContext.src = comment.video,
-        innerAudioContext.onPlay(() => {
-          console.log('开始播放')
-        })
-      innerAudioContext.onError((res) => {
-        console.log(res.errMsg)
-        console.log(res.errCode)
-      })
-      return
+      innerAudioContext.src = comment.video
+      innerAudioContext.play()
     }
   },
   reEditCom() {

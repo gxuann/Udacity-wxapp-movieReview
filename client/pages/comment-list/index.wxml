@@ -6,10 +6,10 @@
       <view data-index="{{index}}" class='username' data-name="noplay">{{item.username}}</view>
     </view>
     <view data-index="{{index}}" class='usertext' wx:if="{{item.cmt === 'wz'}}">{{item.content}}</view>
-    <view data-name="play" class='reEditComBox' bindtap='replay' data-index="{{index}}" wx:else>
+    <view data-name="play" class='reEditComBox' data-index="{{index}}" wx:else>
       <view data-name="play" class='reEditComButton' bindtap='replay' data-index="{{index}}">
-        <view data-name="play" class='video-box' bindtap='replay' data-index="{{index}}">
-          <image data-name="play" class='video-button' mode='aspectFill' src='/images/play.png' bindtap='replay' data-index="{{index}}"></image>
+        <view data-name="play" class='video-box' data-index="{{index}}">
+          <image data-name="play" class='video-button' mode='aspectFill' src='/images/play.png' data-index="{{index}}"></image>
         </view>
       </view>
     </view>

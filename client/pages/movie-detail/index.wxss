@@ -32,7 +32,8 @@
 .detail-desc{
   margin: 40rpx 56rpx auto;
   font-size: 28rpx;
-  height: 70%
+  height: 600rpx;
+  overflow: hidden;
 }
 .detail-footer{
   display: flex;

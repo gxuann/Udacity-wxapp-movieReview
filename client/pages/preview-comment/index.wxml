@@ -12,11 +12,11 @@
   <text class='reEditComText1'>"</text>
     <text class='reEditComText'>{{comment.recomments}}</text>
   </view>
-  <view class='reEditComBox' wx:else bindtap='replay' data-name="play">
+  <view class='reEditComBox' wx:else data-name="play">
     <text class='reEditComText1'>"</text>
-    <view class='reEditComButton' bindtap='replay' data-name="play">
+    <view class='reEditComButton' data-name="play">
       <view class='video-box' bindtap='replay' data-name="play">
-        <image class='video-button' mode='aspectFill' src='/images/play.png' bindtap='replay' data-name="play"></image>
+        <image class='video-button' mode='aspectFill' src='/images/play.png' data-name="play"></image>
       </view>
     </view>
   </view>
